@@ -1,4 +1,4 @@
-"""smoreproject URL Configuration
+"""Smoreproject URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from smore import views as s
+from account import views as a
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', s.home, name='home'),
+    path('', a.home, name='home'),
+    path('login/', a.login, name='login'),
+    path('signup/', a.signup, name='signup'),
 ]
