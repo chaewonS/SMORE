@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="kr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="Chrome">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} home {% endblock %}
+{% block link %} {% static 'css/home.css' %}{% endblock %}
+{% block content %}
+
     [로그인구현]
     {% if user.is_authenticated %}
     <h3>{{ user.company_name }}님 반갑습니다!</h3>
@@ -24,5 +21,4 @@
         <button>회원가입</button>
     </a>
     {% endif %}
-</body>
-</html>
+{% endblock %}
