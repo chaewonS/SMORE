@@ -1,9 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
     <title>Document</title>
 </head>
 <body>
@@ -41,6 +43,14 @@
                 <h3 class="join_title"><label for="company_name">회사명</label></h3>
                 <span class="box int_name">
                     <input class="int" type="text" name="company_name" placeholder="회사명" maxlength="20" required><br>
+                </span>
+            </div>
+
+            <!-- profileImg -->
+            <div>
+                <h3 class="join_title"><label for="company_logo">회사로고</label></h3>
+                <span class="box int_img">
+                    <input class="int" type="file" name="company_logo" accept="image/*"  maxlength="20" required>
                 </span>
             </div>
 

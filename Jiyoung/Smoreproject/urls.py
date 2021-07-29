@@ -15,13 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 from account import views as A
 from smore import views as S
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', A.home, name='home'),
     path('account/signup', A.signup, name="signup"),
     path('account/user_login/', A.user_login, name="user_login"),
     path('account/user_logout/',A.user_logout, name="user_logout"),
-]
+]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
