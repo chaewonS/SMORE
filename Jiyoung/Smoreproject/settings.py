@@ -117,6 +117,15 @@ USE_L10N = True
 
 USE_TZ = True
 
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'smore', 'static'),
+    os.path.join(BASE_DIR, 'account', 'static'),
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
