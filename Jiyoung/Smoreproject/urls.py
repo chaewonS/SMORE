@@ -19,10 +19,15 @@ from django.conf import settings
 from django.conf.urls.static import static
 from account import views as A
 from smore import views as S
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', S.home, name='home'),
     path('account/signup', A.signup, name="signup"),
     path('account/user_login/', A.user_login, name="user_login"),
     path('account/user_logout/',A.user_logout, name="user_logout"),
+    path('smore/create', S.create, name="create"),
+    path('smore/detail/<str:id>', S.detail, name="detail"),
+    path('smore/edit/<str:id>', S.edit, name="edit"),
+    path('smore/delete/<str:id>', S.delete, name='delete'),
 ]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
