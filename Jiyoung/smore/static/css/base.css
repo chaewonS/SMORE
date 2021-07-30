@@ -7,3 +7,8 @@
 *{
     font-family: 'S-CoreDream-4Regular';
 }
+
+a{
+    text-decoration: none;
+    color: white;
+}

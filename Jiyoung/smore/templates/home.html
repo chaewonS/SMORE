@@ -4,21 +4,4 @@
 {% block link %} {% static 'css/home.css' %}{% endblock %}
 {% block content %}
 
-    [로그인구현]
-    {% if user.is_authenticated %}
-    <h3>{{ user.company_name }}님 반갑습니다!</h3>
-    {% if user.company_logo %}
-    <img class="img" src="{{ user.company_logo.url }}" id="profileimg" width="180" height="180">
-    {% endif %}
-    <a href="{% url 'user_logout' %}">
-        <button>로그아웃</button>
-    </a>
-    {% else %}
-    <a href="{% url 'user_login' %}">
-        <button>로그인</button>
-    </a>
-    <a href="{% url 'signup' %}">
-        <button>회원가입</button>
-    </a>
-    {% endif %}
 {% endblock %}
