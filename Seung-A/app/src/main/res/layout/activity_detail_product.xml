@@ -6,4 +6,249 @@
     android:layout_height="match_parent"
     tools:context=".DetailProduct">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="106dp">
+
+            <ImageView
+                android:id="@+id/Search2"
+                android:layout_width="33dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/find" />
+
+            <ImageView
+                android:id="@+id/Category2"
+                android:layout_width="40dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/menu" />
+
+            <ImageView
+                android:id="@+id/smoreLogo"
+                android:layout_width="139dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="24dp"
+                android:contentDescription="SmoreLogo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/smore_logo" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="#EAE8E1"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/Corporation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/gmarketmedium"
+                android:text="mamaforest / 제품"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.521" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="390dp">
+
+            <ImageView
+                android:id="@+id/ProductPhoto"
+                android:layout_width="199dp"
+                android:layout_height="218dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/mama_prodect" />
+
+            <TextView
+                android:id="@+id/ProductName"
+                android:layout_width="364dp"
+                android:layout_height="42dp"
+                android:layout_marginBottom="92dp"
+                android:fontFamily="@font/gmarketmedium"
+                android:text="내추럴 디쉬바 엔젤베이비 - 영유아식기전용 천연주방세제"
+                android:textColor="#676060"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.862"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/Shipment"
+                android:layout_width="339dp"
+                android:layout_height="18dp"
+                android:layout_marginBottom="27dp"
+                android:fontFamily="@font/gmarketlight"
+                android:text="배송비: 3,000원 (40,000원 이상 구매 시 무료)"
+                android:textColor="#676060"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.466"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/ShipPeriod"
+                android:layout_width="337dp"
+                android:layout_height="16dp"
+                android:layout_marginBottom="11dp"
+                android:fontFamily="@font/gmarketlight"
+                android:text="배송 기간 : 주문 후 배송완료까지 1일 ~ 3일(영업일 기준) 소요"
+                android:textColor="#676060"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.451"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/ProductPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="75dp"
+                android:fontFamily="@font/gmarketmedium"
+                android:text="10,500"
+                android:textColor="#676060"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="99dp"
+            android:background="#F3F2EF">
+
+            <TextView
+                android:id="@+id/ProductNumMent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/gmarketmedium"
+                android:text="제품 수량"
+                android:textColor="#8E8780"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.155" />
+
+            <ImageButton
+                android:id="@+id/PlusButton"
+                android:layout_width="57dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="12dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/plus_button" />
+
+            <ImageButton
+                android:id="@+id/MinusButton"
+                android:layout_width="53dp"
+                android:layout_height="66dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="124dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/minus_button" />
+
+            <TextView
+                android:id="@+id/ProductNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="90dp"
+                android:fontFamily="@font/gmarketmedium"
+                android:text="1"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.252" />
+
+            <Button
+                android:id="@+id/MyProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="@font/gmarketmedium"
+                android:text="장바구니"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/BuyNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="65dp"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="@font/gmarketmedium"
+                android:text="바로 구매"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="#EAE8E1">
+
+            <TextView
+                android:id="@+id/DetailedPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/gmarketmedium"
+                android:text="상세 페이지"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.521" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
