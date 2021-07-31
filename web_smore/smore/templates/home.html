@@ -4,6 +4,7 @@
 {% block link %} {% static 'css/home.css' %}{% endblock %}
 {% block content %}
     <h2>{{ user.company_name }}님! 안녕하세요!</h2>
+    <p><a class="detail" href="{% url 'mypage' user.id %}"><button>마이페이지</button></a></p>
     {% for item in items %}
     <div>
         {% if user == item.author %}
