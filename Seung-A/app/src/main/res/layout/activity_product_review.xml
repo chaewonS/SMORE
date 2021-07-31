@@ -117,19 +117,30 @@
             android:layout_height="44dp"
             android:background="#EAE8E1">
 
-            <TextView
-                android:id="@+id/ReviewTitle"
+            <Button
+                android:id="@+id/reviewButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginEnd="220dp"
+                android:background="@android:color/transparent"
                 android:fontFamily="@font/gmarketmedium"
-                android:text="Review"
+                android:text="리뷰"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/detailPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/gmarketmedium"
+                android:text="상세 정보"
+                android:textColor="#6C6C6C"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.521" />
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout

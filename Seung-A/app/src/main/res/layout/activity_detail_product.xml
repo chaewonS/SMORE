@@ -22,7 +22,9 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="106dp">
+                    android:layout_height="106dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
 
                     <ImageView
                         android:id="@+id/Search2"
@@ -240,30 +242,27 @@
                     android:layout_height="44dp"
                     android:background="#EAE8E1">
 
-                    <TextView
-                        android:id="@+id/DetailedPage"
+                    <Button
+                        android:id="@+id/DetailPage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
+                        android:background="@android:color/transparent"
                         android:fontFamily="@font/gmarketmedium"
-                        android:text="상세 페이지"
+                        android:text="상세 정보"
                         android:textColor="#000000"
                         android:textSize="16sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.521" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <Button
-                        android:id="@+id/review"
+                        android:id="@+id/ReviewButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginEnd="200dp"
+                        android:layout_marginEnd="220dp"
                         android:background="@android:color/transparent"
                         android:fontFamily="@font/gmarketmedium"
                         android:text="리뷰"
-                        android:textColor="#000000"
+                        android:textColor="#676767"
                         android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />

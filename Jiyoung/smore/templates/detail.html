@@ -7,8 +7,10 @@
 <p>
     {{ item.body }}</p>
     <div>
-        <img src="{{item.image.url}}" width="400" height="400">
-        </div>
+        {% for itemimage in image %}
+        <img src="{{itemimage.image.url}}" width="400" height="400">
+        {% endfor %}    
+    </div>
 
 
 {% endblock %}

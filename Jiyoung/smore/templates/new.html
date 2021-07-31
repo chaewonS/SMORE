@@ -9,7 +9,7 @@
     {% csrf_token %}
     <input name="item_name" type="text" placeholder="상품명을 입력하세요"><br>
     <input name="body" type="text" placeholder="상품설명을 입력하세요">
-    <p>물건 이미지 : <input class="int" type="file" name="image" required></p>
+    <p>물건 이미지 : <input class="int" type="file" name="image" required multiple></p>
     <button>상품 등록</button>
 </form>
 {% endblock %}
