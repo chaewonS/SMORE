@@ -5,7 +5,12 @@
 {% block content %}
 
 <p>
-    {{ item.body }}
-</p>
+    {{ item.body }}</p>
+    <div>
+        {% for itemimage in image %}
+        <img src="{{itemimage.image.url}}" width="400" height="400">
+        {% endfor %}    
+    </div>
+
 
 {% endblock %}
