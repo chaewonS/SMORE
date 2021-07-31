@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_centerHorizontal="true"
+    android:background="@android:color/transparent"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -80,7 +81,7 @@
             android:layout_height="158dp">
 
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/Bestcorp1"
                 android:layout_width="76dp"
                 android:layout_height="61dp"
                 android:layout_marginStart="16dp"
@@ -90,7 +91,7 @@
                 app:srcCompat="@drawable/bestlogo1" />
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/Bestcorp2"
                 android:layout_width="118dp"
                 android:layout_height="68dp"
                 android:layout_marginStart="89dp"
@@ -100,7 +101,7 @@
                 app:srcCompat="@drawable/bestlogo2" />
 
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/Bestcorp3"
                 android:layout_width="66dp"
                 android:layout_height="86dp"
                 android:layout_marginTop="14dp"
@@ -110,7 +111,7 @@
                 app:srcCompat="@drawable/bestlogo3" />
 
             <ImageView
-                android:id="@+id/imageView8"
+                android:id="@+id/Bestcorp4"
                 android:layout_width="96dp"
                 android:layout_height="75dp"
                 android:layout_marginTop="22dp"
@@ -141,6 +142,193 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="325dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/FoUser3"
+                android:layout_width="wrap_content"
+                android:layout_height="109dp"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="218dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                </HorizontalScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageButton
+                android:id="@+id/ForUserLogo1"
+                android:layout_width="79dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="24dp"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/oceanflow_logo" />
+
+            <ImageButton
+                android:id="@+id/ForUserLgo2"
+                android:layout_width="95dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="120dp"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/erigeron_logo" />
+
+            <ImageButton
+                android:id="@+id/ForUserLogo3"
+                android:layout_width="92dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="235dp"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/mamaforest_logo" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ForUser1"
+                android:layout_width="wrap_content"
+                android:layout_height="109dp"
+                android:layout_marginStart="120dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                </HorizontalScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ForUser2"
+                android:layout_width="wrap_content"
+                android:layout_height="109dp"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="109dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="1000dp"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/for2_1"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="15dp"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitCenter"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/erigeron1" />
+
+                        <ImageButton
+                            android:id="@+id/for2_2"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="15dp"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitCenter"
+                            app:layout_constraintStart_toEndOf="@+id/for2_1"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/erigeron2" />
+
+                        <ImageButton
+                            android:id="@+id/for2"
+                            android:layout_width="162dp"
+                            android:layout_height="68dp"
+                            android:layout_marginStart="400dp"
+                            android:layout_marginTop="20dp"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitCenter"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/erigeron3" />
+
+                        <ImageButton
+                            android:id="@+id/for2_3"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="15dp"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitCenter"
+                            app:layout_constraintStart_toEndOf="@+id/for2_2"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/erigeron3" />
+
+                        <ImageButton
+                            android:id="@+id/for2_4"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="15dp"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitCenter"
+                            app:layout_constraintStart_toEndOf="@+id/for2_3"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/erigeron4" />
+
+                        <ImageButton
+                            android:id="@+id/for2_5"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="360dp"
+                            android:layout_marginTop="16dp"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitCenter"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/erigeron5" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </HorizontalScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
