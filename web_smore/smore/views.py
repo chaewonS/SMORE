@@ -9,7 +9,7 @@ from .models import *
 # Create your views here.
 def home(request):
     items = Item.objects.all()
-    itemImage = ItemImage.objects.all()
+    itemImage = ItemImage.objects.all().first()
     return render(request, 'home.html',{'items':items, 'image':itemImage})
 
 def create(request):
@@ -47,6 +47,8 @@ def edit(request, id):
         edit_item.item_name = request.POST["item_name"]
         edit_item.body = request.POST["body"]
         edit_item.save()
+        delete_img = ItemImage.objects.all().filter(itemFK = id)
+        delete_img.delete()
         for img in request.FILES.getlist('image'):
             image = ItemImage()
             image.itemFK = edit_item
