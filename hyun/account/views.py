@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from .models import User
+from .models import User, UserPaper
 from django.contrib import auth
 
 # Create your views here.
@@ -25,8 +25,15 @@ def signup(request):
             username = request.POST["username"],
             password = request.POST["password"],
             company_name = request.POST["company_name"],
+            company_number = request.POST["company_number"],
+            company_location = request.POST["company_location"],
         )
         user.save()
+        for papers in request.FILES.getlist('company_paper'):
+            paper = UserPaper()
+            paper.companyFK = user
+            paper.papers = papers
+            paper.save()
         auth.login(request, user)
         return redirect('home')
     else:
