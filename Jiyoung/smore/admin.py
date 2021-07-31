@@ -1,5 +1,12 @@
 from django.contrib import admin
-from .models import Item
+from .models import Item, ItemImage
 # Register your models here.
 
-admin.site.register(Item)
+
+class ItemInline(admin.TabularInline):
+    model = ItemImage
+
+class PostAdmin(admin.ModelAdmin):
+    inlines = [ItemInline, ]
+
+admin.site.register(Item, PostAdmin)
