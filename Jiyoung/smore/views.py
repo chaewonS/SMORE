@@ -78,3 +78,24 @@ def exper_create(request):
     else :
         return render(request,'exper_create.html')
 
+def exper_detail(request, id):
+    exper = get_object_or_404(ExperRec, pk = id)
+    return render(request, 'exper_detail.html', {'exper':exper})
+
+def exper_edit(request, id):
+    if request.method == "POST":
+        edit_exper = ExperRec.objects.get(id = id)
+        edit_exper.exper_title = request.POST["exper_title"]
+        edit_exper.exper_body = request.POST["exper_body"]
+        edit_exper.exper_image=request.FILES['exper_image']
+        
+        edit_exper.save()
+        return redirect('detail', edit_exper.id)
+    else:
+        exper = ExperRec.objects.get(id = id)
+        return render(request, 'exper_edit.html', {'exper': exper})
+
+def exper_delete(request, id):
+    delete_exper = ExperRec.objects.get(id = id)
+    delete_exper.delete()
+    return redirect('experience')
