@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from account.models import User
 from django.utils import timezone
 from smore.models import Item
+from smore.models import ExperRec
 from .models import *
 
 
@@ -16,6 +17,7 @@ def create(request):
         new_item.item_name = request.POST['item_name']
         new_item.body = request.POST['body']
         new_item.pub_date = timezone.datetime.now()
+        new_item.image=request.FILES['image']
 
         user_id = request.user.id
 
@@ -38,6 +40,8 @@ def edit(request, id):
         edit_item = Item.objects.get(id = id)
         edit_item.item_name = request.POST["item_name"]
         edit_item.body = request.POST["body"]
+        edit_item.image=request.FILES['image']
+        
         edit_item.save()
         return redirect('detail', edit_item.id)
     else:
@@ -48,3 +52,4 @@ def delete(request, id):
     delete_item = Item.objects.get(id = id)
     delete_item.delete()
     return redirect('home')
+
