@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} My page {% endblock %}
+{% block link %}{% endblock %}
+{% block content %}
+
+<h3>내 정보</h3>
+
+    
+    회사 이름 : {{users.company_name}}<br>
+    회사 주소 : {{users.company_location}}<br>
+    사업자 번호 : {{users.company_number}}<br>
+    회사로고 : <img src="{{users.company_logo.url}}" width="250"><br>
+    <a href="{% url 'mypage_edit' user.id %}"><button>회사 정보 수정</button></a>
+    
+{% endblock %}

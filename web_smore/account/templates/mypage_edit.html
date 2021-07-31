@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} My page {% endblock %}
+{% block link %}{% endblock %}
+{% block content %}
+
+<h3>내 정보</h3>
+
+<form method="POST" action="{% url 'mypage_edit' user.id %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    회사 이름 : <input name="company_name" type="text" placeholder="회사 이름" value="{{users.company_name}}"><br>
+    회사 주소 : <input name="company_location" type="text" placeholder="회사 주소" value="{{users.company_location}}"><br>
+    사업자 번호 : <input name="company_number" type="text" placeholder="사업자 번호" value="{{users.company_number}}"><br>
+    <p>회사 증빙자료<input name="company_paper" type="file"  value="{{users.company_paper}}"required multiple></p><br>
+    <p>회사로고 : <input class="int" type="file" name="company_logo" accept="image/*" required></p>
+    <button>상품 수정</button>
+</form>
+{% endblock %}
