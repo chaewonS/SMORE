@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} home {% endblock %}
+{% block link %}{% endblock %}
+{% block content %}
+<form method="POST" action="{% url 'exper_edit' % exper.id}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input name="exper_title" type="text" placeholder="체험명을 입력하세요."><br>
+    <input name="exper_body" type="text" placeholder="체험단 설명을 입력하세요.">
+    <input name="exper_period" type="text" placeholder="활동기간 YYYY-MM-DD ~ YYYY-MM-DD">
+    <p>물건 이미지 : <input class="int" type="file" name="exper_image" required></p>
+    <button>상품 등록</button>
+</form>
+{% endblock %} 

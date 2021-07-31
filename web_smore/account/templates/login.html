@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} login {% endblock %}
+{% block link %} {% static 'css/login.css' %}{% endblock %}
+{% block content %}
+
+    <form method="POST" action="{% url 'user_login' %}">
+        {% csrf_token %}
+        <h1 class="title">로그인</h1>
+    
+        <div class="content">
+            <div class="login">
+                <input type="text" id="id" name="username" placeholder="아이디"><br>
+                <input type="password" id="password" name="password" placeholder="비밀번호"><br>
+            </div>
+        </div>
+    
+        <!-- wrapper -->
+        <div id="wrapper">
+        <!-- content-->
+        <div id="content">
+            <!-- JOIN BTN-->
+            <div class="btn_area">
+                <button id="btnJoin">
+                    로그인
+                </button>
+                <p style="text-align: center;"><a href="{% url 'signup' %}" style="color:black;">회원가입</a></p>
+            </div>
+        </div> 
+    </div> 
+        <p id="error">{{error}}</p>
+    </form>
+{% endblock %}
