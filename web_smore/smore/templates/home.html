@@ -3,8 +3,13 @@
 {% block title %} home {% endblock %}
 {% block link %} {% static 'css/home.css' %}{% endblock %}
 {% block content %}
+    {% if user.is_authenticated %}
     <h2>{{ user.company_name }}님! 안녕하세요!</h2>
     <p><a class="detail" href="{% url 'mypage' user.id %}"><button>마이페이지</button></a></p>
+    {% else %}
+    <h2>로그인을 해주세요</h2>
+    <p><a class="detail" href="{% url 'user_login' %}"><button>로그인</button></a></p>
+    {% endif %}
     {% for item in items %}
     <div>
         {% if user == item.author %}
