@@ -1,5 +1,31 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block js %}
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+ 
+$(document).ready(function () {
+   $(function () {
+             
+            $('#company_number').keydown(function (event) {
+             var key = event.charCode || event.keyCode || 0;
+             $text = $(this);
+             if (key !== 8 && key !== 9) {
+                 if ($text.val().length === 3) {
+                     $text.val($text.val() + '-');
+                 }
+                 if ($text.val().length === 6) {
+                     $text.val($text.val() + '-');
+                 }
+             }
+ 
+             return (key == 8 || key == 9 || key == 46 || (key >= 48 && key <= 57) || (key >= 96 && key <= 105));
+         })
+   });
+ 
+});
+</script>
+{% endblock %}
 {% block title %} signup {% endblock %}
 {% block link %} {% static 'css/signup.css' %}{% endblock %}
 {% block content %}
@@ -37,6 +63,30 @@
                 <h3 class="join_title"><label for="company_name">회사명</label></h3>
                 <span class="box int_name">
                     <input class="int" type="text" name="company_name" placeholder="회사명" maxlength="20" required><br>
+                </span>
+            </div>
+
+            <!-- LOCATION -->
+            <div>
+                <h3 class="join_title"><label for="company_location">회사주소</label></h3>
+                <span class="box int_name">
+                    <input class="int" type="text" name="company_location" placeholder="회사주소" maxlength="20" required><br>
+                </span>
+            </div>
+
+            <!-- NUMBER -->
+            <div>
+                <h3 class="join_title"><label for="company_number">사업자번호</label></h3>
+                <span class="box int_name">
+                    <input class="int" type="text" id="company_number" name="company_number" placeholder="사업자번호" maxlength="20" required><br>
+                </span>
+            </div>
+
+            <!-- NUMBER -->
+            <div>
+                <h3 class="join_title"><label for="company_paper">증빙자료</label></h3>
+                <span class="box int_name">
+                    <input class="int" type="file" name="company_paper" maxlength="20" required multiple><br>
                 </span>
             </div>
 
