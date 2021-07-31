@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} home {% endblock %}
+{% block link %}{% endblock %}
+{% block content %}
+<h2>{{ exper.exper_title }}</h2>
+    <div>
+                <p>
+            <div>
+                <img src="{{exper.exper_image.url}}" width="400" height="400">
+                </div>
+            <span>{{ exper.exper_body }}</span>
+        </p>
+        <hr>
+    </div>
+
+
+{% endblock %} 
