@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} home {% endblock %}
+{% block link %}{% endblock %}
+{% block content %}
+
+<p>
+    {{ item.body }}</p>
+    <div>
+        {% for itemimage in image %}
+        <img src="{{itemimage.image.url}}" width="200" height="200">
+        {% endfor %}
+        </div>
+
+
+{% endblock %}
