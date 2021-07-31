@@ -53,3 +53,28 @@ def delete(request, id):
     delete_item.delete()
     return redirect('home')
 
+def experience(request):
+    expers = ExperRec.objects.all()
+    return render(request, 'experience.html',{'expers':expers})
+
+def exper_create(request):
+    if request.method == "POST" :
+        new_exper = ExperRec()
+        new_exper.exper_title = request.POST['exper_title']
+        new_exper.exper_body = request.POST['exper_body']
+        new_exper.exper_period = request.POST['exper_period']
+        new_exper.exper_pub_date = timezone.datetime.now()
+        new_exper.exper_image=request.FILES['exper_image']
+
+        user_id = request.user.id
+
+        user = User.objects.get(id = user_id)
+
+        new_exper.exper_author = user
+
+        new_exper.save()
+        return redirect('experience')
+
+    else :
+        return render(request,'exper_create.html')
+

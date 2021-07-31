@@ -3,6 +3,23 @@
 {% block title %} home {% endblock %}
 {% block link %}{% endblock %}
 {% block content %}
+<h2>체험단 모집 공고!</h2>
+    {% for exper in expers %}
+    <div>
+        {% if user == exper.exper_author %}
+                <p>
+            <div>
+                <img src="{{exper.exper_image.url}}" width="400" height="400">
+                </div>
+            <span>{{ exper.exper_title }}</span><br>
+            <span>{{ exper.exper_author }}</span><br>
+            <span>{{ exper.exper_period }}</span><br>
+            <span>{{ exper.exper_author }}</span>
+        </p>
 
+        <hr>
+        {% endif%}
+    </div>
+    {% endfor %}
 
 {% endblock %}
