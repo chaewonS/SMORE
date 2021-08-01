@@ -1,15 +1,30 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %} home {% endblock %}
-{% block link %}{% endblock %}
-{% block content %}
-<h3>상품수정</h3>
+{% block title %} Edit {% endblock %}
+{% block link %}{% static 'css/edit.css' %}{% endblock %}
 
-<form method="POST" action="{% url 'edit' item.id %}" enctype="multipart/form-data">
-    {% csrf_token %}
-    <input name="item_name" type="text" placeholder="상품명을 입력하세요" value="{{item.item_name}}"><br>
-    <input name="body" type="text" placeholder="상품설명을 입력하세요" value="{{item.body}}">
-    <p>물건 이미지 : <input class="int" type="file" name="image" accept="image/*" required multiple></p>
-    <button>상품 수정</button>
-</form>
+{% block content %}
+<div id="container">
+    
+    <h2>상품수정</h2>
+
+    <div id="editBox">
+        <form method="POST" action="{% url 'edit' item.id %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p class="editBoxTitle">상품명</p>
+            <p class="editDetail">
+                <input name="item_name" class="item" type="text" placeholder="상품명을 입력하세요" value="{{item.item_name}}">
+            </p>
+            <p class="editBoxTitle">상세 설명</p>
+            <p class="editDetail">
+                <textarea name="body" class="item" cols="90" rows="15" placeholder="상품설명을 입력하세요" value="{{item.body}}"></textarea>
+            </p>
+            <p class="editBoxTitle">첨부 이미지</p>
+            <p class="editDetail">
+                <input class="int" type="file" name="image" accept="image/*" required multiple>
+            </p>
+            <button id="editButton">상품 수정</button>
+        </form>
+    </div>
+</div>
 {% endblock %}

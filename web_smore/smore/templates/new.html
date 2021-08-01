@@ -1,15 +1,29 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %} home {% endblock %}
-{% block link %}{% endblock %}
+{% block link %}{% static 'css/new.css' %}{% endblock %}
 {% block content %}
-<h3>상품등록</h3>
+<div id="container">
+    <h2>상품등록</h2>
+    <div id="newBox">
+        <form method="POST" action="{% url 'create' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p class="newBoxTitle">상품명</p>
+            <p class="newDetail">
+                <input name="item_name" class="item" type="text" placeholder="상품명을 입력하세요">
+            </p>
+            <p class="newBoxTitle">상세 설명</p>
+            <p class="newDetail">
+                <textarea name="body" class="item" cols="90" rows="15" placeholder="상품설명을 입력하세요"></textarea>
+            </p>
+            <p class="newBoxTitle">첨부 이미지</p>
+            <p class="newDetail">
+                <input class="int" type="file" name="image" required multiple>
+            </p>
+            <button id="newButton">상품 등록</button>
+        </form>
 
-<form method="POST" action="{% url 'create' %}" enctype="multipart/form-data">
-    {% csrf_token %}
-    <input name="item_name" type="text" placeholder="상품명을 입력하세요"><br>
-    <input name="body" type="text" placeholder="상품설명을 입력하세요">
-    <p>물건 이미지 : <input class="int" type="file" name="image" required multiple></p>
-    <button>상품 등록</button>
-</form>
+    </div>
+</div>
+
 {% endblock %}

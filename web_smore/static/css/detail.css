@@ -1,0 +1,29 @@
+#container {
+    width: 1500px; height: 1000px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#detailBox {
+    width: 1000px; height: 800px;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+}
+#detail {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.detailDetail {
+    display: flex;
+    width: 600px; height: auto;
+    align-items: baseline;
+}
+.detailBoxTitle {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+}

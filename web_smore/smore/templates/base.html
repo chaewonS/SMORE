@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="{% block link %}{% endblock %}">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
         {% block js %}{% endblock %}
+        
+        <script src="{% static 'js/script.js' %}"></script>
         <title> {% block title%} {% endblock %} </title>
        </head>
     <body>
@@ -83,7 +85,7 @@
          </li>
          <li class="profile">
              <div class="profile-details">
-               <img src="profile.jpg" alt="profileImg">
+               <img src="#" alt="profileImg">
                <div class="name_job">
                  <div class="name">Prem Shahi</div>
                  <div class="job">Web designer</div>
@@ -96,7 +98,6 @@
       <section class="home-section">
           <div class="text">Dashboard</div>
       </section>
-      <script src="script.js"></script>
       {% block content %}
       {% endblock %}
     </body>

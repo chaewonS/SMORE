@@ -1,0 +1,46 @@
+#container {
+    width: 1500px; height: 1000px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#editBox {
+    width: 800px; height: 800px;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+}
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 90px;
+}
+.editDetail {
+    display: flex;
+    width: 600px; height: auto;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+.item {
+    font-size: 17px;
+    width: 800px;
+}
+textarea {
+    resize: none;
+}
+.editBoxTitle {
+    font-size: 22px;
+    font-weight: bold;
+}
+#editButton {
+    width: 120px; height: 30px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    margin-left: 480px;
+}
+#editButton:hover {
+    background-color: bisque;
+}
